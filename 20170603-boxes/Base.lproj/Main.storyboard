@@ -74,18 +74,44 @@
                                     <action selector="button4Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lbe-sk-qGR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OR5-OK-3sc">
+                                <rect key="frame" x="82" y="498" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="0uy-5b-zsR"/>
+                                    <constraint firstAttribute="height" constant="30" id="uef-N5-W6h"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button5Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cy1-D5-aFs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c5-VI-DnZ">
+                                <rect key="frame" x="277" y="67" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GJi-Sh-Up4"/>
+                                    <constraint firstAttribute="width" constant="46" id="WeG-uU-kGv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button6Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3r-q2-9v6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OR5-OK-3sc" firstAttribute="top" secondItem="DCa-OC-qBc" secondAttribute="bottom" constant="276" id="0Fx-GM-C7f"/>
                             <constraint firstItem="vw7-Jk-oAL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="452" id="AGO-JZ-B3d"/>
+                            <constraint firstItem="9c5-VI-DnZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="EHX-2Z-zQD"/>
                             <constraint firstItem="DCa-OC-qBc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="76" id="IdE-GA-nPs"/>
                             <constraint firstItem="tb9-y5-qin" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="298" id="S9v-Zd-8QQ"/>
                             <constraint firstItem="tuv-Zk-4JW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SQk-1w-hL5"/>
                             <constraint firstItem="vw7-Jk-oAL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="236" id="dZ9-1u-9FR"/>
                             <constraint firstItem="tuv-Zk-4JW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="298" id="i0s-t7-mc8"/>
+                            <constraint firstItem="9c5-VI-DnZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="261" id="iHx-58-w7M"/>
                             <constraint firstItem="Hgl-qE-n8N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="283" id="jjk-la-MXP"/>
                             <constraint firstItem="DCa-OC-qBc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="l38-C9-Y57"/>
                             <constraint firstItem="tb9-y5-qin" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lKO-z2-6hs"/>
+                            <constraint firstItem="OR5-OK-3sc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="66" id="nQT-2s-BkN"/>
                             <constraint firstItem="Hgl-qE-n8N" firstAttribute="leading" secondItem="tuv-Zk-4JW" secondAttribute="trailing" constant="95" id="vid-VO-bQo"/>
                         </constraints>
                     </view>

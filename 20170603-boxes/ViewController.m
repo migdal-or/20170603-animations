@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-NSTimeInterval animationDuration = 1;
+NSTimeInterval animationDuration = 3;
 CGPoint blackBoxCenterStored;
 
 @interface ViewController ()
@@ -46,7 +46,7 @@ CGPoint blackBoxCenterStored;
     [UIView animateWithDuration:animationDuration animations:^{
         self.blackBox.transform = CGAffineTransformRotate(transform, M_PI / 2);
         self.blackBox.center = blackBoxCenterStored;
-    }];    
+    }];
 }
 
 - (IBAction)button4Click:(id)sender {
@@ -56,10 +56,39 @@ CGPoint blackBoxCenterStored;
         self.blackBox.center = blackBoxCenter;
     }];
 }
+- (IBAction)button5Click:(id)sender {
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath = @"position.x";
+    animation.values = @[ @0, @10, @-10, @10, @0 ];
+    animation.keyTimes = @[ @0, @(1 / 6.0), @(3 / 6.0), @(5 / 6.0), @1 ];
+    animation.duration = 0.4;
+    
+    animation.additive = YES;
+    
+    [self.blackBox.layer addAnimation:animation forKey:@"shake"];
+    
+    for (CALayer *layer in @[self.button1, self.button2, self.button3, self.button4 ]) {
+        [layer addAnimation:animation forKey:@"shake"];
+    }
+}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)button6Click:(id)sender {
+
+    CGRect boundingRect = CGRectMake(-15, -15, 30, 30);
+    CAKeyframeAnimation *orbit = [CAKeyframeAnimation animation];
+    orbit.keyPath = @"position";
+    orbit.path = CFAutorelease(CGPathCreateWithRect(boundingRect, NULL));
+    orbit.duration = 4;
+    orbit.additive = YES;
+    orbit.repeatCount = HUGE_VALF;
+    orbit.calculationMode = kCAAnimationPaced;
+    orbit.rotationMode = kCAAnimationRotateAuto;
+
+    if ([self.button1.layer.animationKeys containsObject:@"orbit"]) {
+        [self.button1.layer removeAnimationForKey:@"orbit"];
+    } else {
+        [self.button1.layer addAnimation:orbit forKey:@"orbit"];
+    }
 }
 
 @end
